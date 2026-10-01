@@ -21,6 +21,12 @@ export const zStrategiesQueryParams = z.object({
     limit: z.number().int().min(1).max(500).optional().describe(
         "Rows to return, 1–500 (default 50).",
     ),
+    quote_ready: z.boolean().optional().describe(
+        "Set true to return only the strategies /api/quote can simulate — " +
+            "USDC/USDT pairs attached to the TRDEFI router. Pick a hash " +
+            "here before calling /api/quote so a UNPROCESSABLE reads as " +
+            "coverage, not as a broken request.",
+    ),
     source: z.string().min(1).optional().describe(
         "'catalogue' (default, the normalised roll-up) or 'scan' for a " +
             "fresh chain-by-chain scan (slower, ~10s; empty strategies and " +

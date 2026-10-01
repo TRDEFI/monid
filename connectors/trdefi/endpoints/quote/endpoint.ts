@@ -18,7 +18,10 @@ export default defineEndpoint({
             "gate a strategy on the caller holding an access licence token " +
             "— pass your own address as 'from' to be priced against it. " +
             "Browsed candidates come from /api/strategies; the actual fill " +
-            "is prepared on the x402 write path (POST /v1/swaps).",
+            "is prepared on the x402 write path (POST /v1/swaps). Only " +
+            "USDC/USDT strategies attached to the TRDEFI router can be " +
+            "simulated; use /api/strategies?quote_ready=true to pick a " +
+            "hash that is quotable.",
         docsUrl: "https://yield.trdefi.com/docs/api",
         categories: ["token-prices", "defi"],
         notes: [
