@@ -1,4 +1,4 @@
-import { assertEquals } from "@std/assert";
+﻿import { assertEquals } from "@std/assert";
 import { fromFileUrl } from "@std/path";
 import {
     loadFixture,
@@ -55,7 +55,7 @@ Deno.test("trdefi#api/stats provider error (synthetic): 503 is data, zero usage"
         unit,
         input: { queryParams: {} },
         mode: "replay",
-        fixture: await loadFixture(`${chains}provider-error.json`),
+        fixture: await loadFixture(`${chains}synthetic-provider-error.json`),
     });
     assertEquals(result.isProviderError, true);
     assertEquals(result.usage, { credits: {}, evidence: {} });

@@ -18,3 +18,15 @@ Deno.test("trdefi#api/chains happy: free — zero usage", async () => {
     const output = result.output as Record<string, unknown>;
     assertEquals(Array.isArray(output.chains), true);
 });
+
+Deno.test("trdefi#api/chains provider error (synthetic): 503 is data, zero usage", async () => {
+    const unit = await testSealedUnit("trdefi#api/chains");
+    const result = await runEndpoint({
+        unit,
+        input: { queryParams: {} },
+        mode: "replay",
+        fixture: await loadFixture(${chains}synthetic-provider-error.json),
+    });
+    assertEquals(result.isProviderError, true);
+    assertEquals(result.usage, { credits: {}, evidence: {} });
+});

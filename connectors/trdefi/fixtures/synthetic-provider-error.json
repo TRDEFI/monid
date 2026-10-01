@@ -1,5 +1,5 @@
 {
-    "name": "provider-error",
+    "name": "synthetic-provider-error",
     "description": "Synthetic upstream-unavailable envelope (503): exercises the provider-error path — a non-2xx completes as data and settles at zero credits.",
     "calls": [
         {

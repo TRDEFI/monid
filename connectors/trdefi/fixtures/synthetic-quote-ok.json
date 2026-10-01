@@ -1,5 +1,5 @@
 {
-    "name": "quote-ok",
+    "name": "synthetic-quote-ok",
     "description": "Synthetic (2026-09-30: no live recording possible — every public USDC/USDT strategy answers 422 today, gated or non-simulatable). The body follows the /api/quote 200 contract (strategies.js handleQuote success return plus the {data, meta} wrapper); field values are placeholders. Unverified against live traffic — replace via `deno task record` once one strategy is publicly quotable.",
     "calls": [
         {

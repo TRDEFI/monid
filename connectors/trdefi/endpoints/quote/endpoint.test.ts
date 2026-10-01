@@ -1,4 +1,4 @@
-import { assertEquals } from "@std/assert";
+﻿import { assertEquals } from "@std/assert";
 import { fromFileUrl } from "@std/path";
 import { loadFixture, runEndpoint, testSealedUnit } from "@shared/testing";
 
@@ -17,7 +17,7 @@ Deno.test("trdefi#api/quote happy: free — zero usage", async () => {
             },
         },
         mode: "replay",
-        fixture: await loadFixture(`${chains}quote-ok.json`),
+        fixture: await loadFixture(`${chains}synthetic-quote-ok.json`),
     });
     assertEquals(result.httpStatus, 200);
     assertEquals(result.isProviderError, false);
@@ -37,7 +37,7 @@ Deno.test("trdefi#api/quote provider error (synthetic): 503 is data, zero usage"
             },
         },
         mode: "replay",
-        fixture: await loadFixture(`${chains}provider-error.json`),
+        fixture: await loadFixture(`${chains}synthetic-provider-error.json`),
     });
     assertEquals(result.isProviderError, true);
     assertEquals(result.usage, { credits: {}, evidence: {} });

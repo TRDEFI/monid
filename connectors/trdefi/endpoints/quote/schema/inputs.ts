@@ -1,4 +1,4 @@
-import { z } from "zod";
+﻿import { z } from "zod";
 
 /** TRDEFI /api/quote query params. */
 export const zQuoteQueryParams = z.object({
@@ -15,7 +15,7 @@ export const zQuoteQueryParams = z.object({
             "'1000000' = 1 USDC at 6 decimals). Which side it counts " +
             "against is set by direction.",
     ),
-    direction: z.string().min(1).optional().describe(
+    direction: z.enum(["aToB", "bToA"]).optional().describe(
         "'aToB' (default): amount is the A-side token. 'bToA': amount is " +
             "the B-side token.",
     ),
