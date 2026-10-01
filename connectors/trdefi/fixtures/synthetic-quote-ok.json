@@ -5,7 +5,7 @@
         {
             "req": {
                 "method": "GET",
-                "url": "{{request.url}}"
+                "url": "{{request.url}}?hash=0x0000000000000000000000000000000000000000000000000000000000000001&chain=ethereum&amount=1000000&direction=aToB"
             },
             "res": {
                 "status": 200,

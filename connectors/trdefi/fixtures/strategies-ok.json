@@ -5,7 +5,7 @@
         {
             "req": {
                 "method": "GET",
-                "url": "{{request.url}}"
+                "url": "{{request.url}}?pair=1INCH%2FUSDC&limit=2"
             },
             "res": {
                 "status": 200,

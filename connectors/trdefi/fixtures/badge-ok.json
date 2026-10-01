@@ -5,7 +5,7 @@
         {
             "req": {
                 "method": "GET",
-                "url": "{{request.url}}"
+                "url": "{{request.url}}?metric=volume30"
             },
             "res": {
                 "status": 200,

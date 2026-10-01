@@ -5,7 +5,7 @@
         {
             "req": {
                 "method": "GET",
-                "url": "{{request.url}}"
+                "url": "{{request.url}}?hash=0x20691ea20452e7b0b7311428ae9be4cf8ffefc890aa09a2c3bcc298198606d72"
             },
             "res": {
                 "status": 200,
